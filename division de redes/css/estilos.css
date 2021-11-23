@@ -1,0 +1,659 @@
+
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*reset para rems - 62.5%=10px de 16px*/
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+  
+body{
+    font-family: 'Lato', sans-serif; 
+    font-size: 1.6rem;
+    line-height: 2;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b7deed+0,71ceef+50,21b4e2+51,b7deed+100;Shape+1+Style */
+background: #b7deed; /* Old browsers */
+background: -moz-linear-gradient(top,  #b7deed 0%, #71ceef 50%, #21b4e2 51%, #b7deed 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #b7deed 0%,#71ceef 50%,#21b4e2 51%,#b7deed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed',GradientType=0 ); /* IE6-9 */
+
+}
+/*____________________________________________________________________________________________*/
+
+
+
+/** globales**/
+img {
+    max-width: 100% ; /*ajusta la imagen al 100% en cualquier dispositivo*/
+    
+}
+
+.contenedor{ /*el punto se utiliza para mandar a llamr a la clase*/
+    width: 95%;
+    max-width: 120rem; /*utiliza el maximo de pixeles*//*1200px*/
+    margin:0 auto; /*centra la imagen en sentido de las manesillas del reloj*/
+
+}
+h1{
+font-size: 3.8rem;
+font-weight: bold;
+text-align: left;
+padding: 5rem;
+}
+h2{
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: #e1e1e1;
+    
+
+}
+h3{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333333;
+}
+h4{
+    font-size: 2.6rem;
+    font-weight: bold;
+
+}
+/*___________________________________________________________________________________________________*/
+
+
+/**utilidades**/
+.seccion{
+    margin-top: 2rem; /*separaciones arriba abajo*/
+    margin-bottom: 2rem;
+}
+.fw-300{
+font-weight: 300;
+}
+.centrar-texto{
+    text-align: center;
+    font-weight: bolder;
+    color: rgb(68, 100, 241);
+    font-weight: 100;
+    font-size: 5rem;
+   
+    
+
+}
+
+.d-block {
+    display: block!important; /*cuando colocas el imoirta le das prioridad al selector en este caso d-block*/
+}
+.contenido-centrado{
+    max-width: 800px;
+}
+
+/*______________________________________________________________________________________________________*/
+
+/*botones*/
+.boton{
+color: white;
+font-weight: 700;
+text-decoration: none; /*quita el subrayado*/
+font-size: 1.8rem;
+padding: 1rem 3rem;
+text-transform: uppercase;
+margin-top: 3rem;
+display: inline-block;
+/*todos los enlaces tiene un display inline que no permite que se modifique el ancho se modifican con display se modifica un enlace o imagen*/
+text-align: center;
+border: none; /*solo aplica para el submit*/
+display: block;
+flex: 0 0 100%;
+
+}
+
+@media (min-width: 768px) {
+    .boton{
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+    
+}
+.boton:hover{
+    cursor: pointer; /*la proiedad del cursos cambia el cursor*/
+}
+
+.boton-azul{
+    background-color:  #0071bd; 
+    
+
+}
+.boton-verde{
+    background-color: rgb(60, 243, 4); 
+    
+
+}
+/*____________________________________________________________________________________________________________________*/
+
+/*header pertenece ala pagina nosotros*/
+.site-header{
+    background-color: #0071bd;
+    padding: 1rem 0 3rem 0;
+}
+
+
+/* header para comentarios en css*/
+.site-header.inicio{
+    background-image: url(../img/switch.jpg); /*..los dos puntos sirve para subir de nivel de dicretorio */
+    background-position: center center; /*coloca la imagen en el centro*/ 
+    background-size: cover; /*toma el 100% de alto y ancho sin perder las propiedades de la imagen para que nose pixelee */
+    height: 100vh; /* vh- toma el 100% el tamaño de pantalla */
+    min-height: 60rem; /* min-heigt toma el valor minimo el valor de la imagen*/
+    
+}
+.contenido-header{
+    height: 100%;
+    display: flex;
+    flex-direction: column; /*lo alinea de forma vertical*/
+    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenido-header{
+        text-align: left;
+    }
+    
+}
+.contenido-header h1{
+    color: whitesmoke;  
+    padding-bottom: 2rem; /*da espacio */
+    max-width: 100rem; /*toma una maximo de ancho de 600 pixeles*/
+    line-height: 2; /*sirve para dar lo interlineados*/
+}
+
+.barra{
+  
+    padding-top: 3rem; /*espacio adentro del elemneto*/
+}
+
+
+
+@media (min-width: 768px) {
+    .barra{
+    display: flex;
+    justify-content: space-between; /*a linea horizontalmente*/
+    align-items: center; /*lo alinea de forma horizontal*/
+    
+    }
+    
+}
+
+/*_________________________________________________________________________________________________*/
+
+
+
+/*navegacion*/
+.navegacion a {
+    color: rgb(255, 255, 255); /*genera transparencia*/   
+   
+    text-decoration: none; /*quita las lineas de la navegacion*/
+    font-size: 2.2rem;    /*tamaño de la letra*/ /**1.8rem=18px**/
+   
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+}
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 2.8rem;    /*tamaño de la letra*/ /**1.8rem=18px**/
+        margin-right: 3rem; /*separacion del lado derecho*/
+        font-weight: bold;
+    }
+    .navegacion a:last-of-type{ /*selecciona el ultimo elemento*/
+        margin: 0;
+    }
+    
+}
+.navegacion a:hover{ /*hover es un seudo selector mas comun  cambia de color los enlaces en la pagina */
+background-color: #013f68;
+padding: 2.5px 15px;
+display: inline-block;
+margin-top: 1px;
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 18px;
+transition: background-color .5s ease-in-out; /*genera el tiempo para seleccionar el boton*/
+}
+
+/*________________________________________________________________________________________________*/
+
+/*mobile menu*/
+.mobile-menu img{
+    width: 5rem;
+}
+@media (min-width: 768px) {
+    .mobile-menu{
+        display: none;
+    }
+    
+}
+.navegacion:target{
+    display: block;
+}
+.navegacion{
+    display: none;
+}
+@media (min-width: 768px) {
+    .navegacion{
+        display: block;
+    }
+    
+}
+
+
+/*iconos-nosotros*/
+/*.encabezado-nosotros{
+    font-weight: 300; /*el numero de grosor de la letra de estar cargado desde el link de google fonts
+    text-align: center;*/
+
+@media (min-width: 768px) {
+    .iconos-nosotros{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        
+        
+        
+        }
+
+    
+}
+
+
+
+
+
+/*____________________________________________________________________________________________________________*/
+
+/*anuncios*/
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: flex; /*acomoda la imagen de forma horizontal desde la clase padre*/
+        justify-content: space-between;
+        flex-wrap: wrap; /*se coloca en el padre para que haga la funcion flex-shrink*/
+
+        
+    }
+    
+}
+
+.anuncio {
+    border: 2px solid rgb(19, 19, 19); /*JUNTA LAS TRES PROIEDADES*/
+    /*border-style: solid; /*genera el marco de la imagenes
+    border-color: #B5B5B5;
+    border-width: 1px;     */
+    background-color: rgba(245, 245, 245, 0.418);
+    margin-bottom: 2rem;
+    
+    
+  
+    
+}
+.anuncio img{
+    width:100%;
+	height:300px;
+	border:0px solid white;
+
+	margin-top:0px;
+	margin-bottom:10px;
+	box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+	background-size: 100% 100%;
+}
+@media (min-width: 768px) {
+    .anuncio{
+        /*flex-shrink: 0; el tamaño sea mas pequeño o grande dependiendo de la propiedad shrink hace mas pequeñala columna grow la hace ma grande*/
+        flex: 0 0 calc(33.3% - 1rem);/*tamaño de los cuadros*/ 
+        
+        
+        
+        
+    }
+    
+}
+
+
+.contenido-anuncio {
+    padding: 2rem;  /*toma todas la medidas globales*/
+    
+}
+.contenido-anuncio h3{
+    text-align: center;
+}
+.contenido-anuncio p {
+    text-align: justify;
+
+}
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+    
+}
+
+
+/*____________________________________________________________________________________________________________*/
+
+/*contacto home*/
+.imagen-contacto{
+    background-image: url(../img/d.png);
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    height: 45rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+  
+
+}
+.imagen-contacto::after{
+   
+    content: ''; /*degrada la imagen*/
+    background-color: rgba(0, 0, 0, 0.7); /*valores para degradar la imagen*/
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.contenido-contacto{
+    flex: 0 0 95%; /*factor de crecimiento detecta el tamaño de la imagen y le asigna un valor al elemento que se encuentren*/
+    color: rgb(250, 250, 250);
+    
+    position: relative;
+    z-index: 1; /*para poner la imagen de fondo*/
+    text-align: center;
+}
+.contenido-contacto p{
+    font-size: 3.5rem;
+
+}
+/*_______________________________________________________________________________________*/
+/*seccion inferior*/
+@media (min-width: 768px) {
+    .seccion-inferior{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .seccion-inferior .blog{
+        flex-basis: 60%;
+    }
+    
+    
+    .seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);
+    }
+
+    
+}
+
+
+.entrada-blog{
+    
+    margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+    .entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    }
+    
+}
+.entrada-blog :last-of-type{
+margin-bottom: 0;
+}
+@media (min-width: 768px) {
+    .entrada-blog .imagen{
+        flex-basis: 40%;
+        }
+        .entrada-blog .texto-entrada{
+            flex-basis: calc(60% - 3rem);
+        
+        }
+
+    
+}
+
+
+.texto-entrada a{
+    color: black;
+    text-decoration:none;
+}
+.texto-entrada h4{
+    margin: 0;
+    line-height: 0.7;
+}
+.texto-entrada h4::after /*afther es un seudo elemento lo reconoces por sus 4 puntos no se puede seleccionar le tenemos que colocar un display block para seleccionar*/{
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: rgb(238, 28, 13);
+    margin-top: 1rem;
+
+
+}
+.texto-entrada span{
+    color:rgb(28, 4, 241);
+}
+
+
+/*_________________________________________________________________________________________________________*/
+
+/*testimoniales*/
+.testimonial{
+    background-color: rgb(7, 150, 216); /*color de fondo*/
+    font-size: 2.4rem; /*tamaño letra*/
+    padding: 2rem; /*tamaño al cuadro*/
+    color: white; /*color de letra*/
+    border-radius: 2rem; /*leda borde al cuadro*/
+
+}
+.testimonial p{
+    text-align: right; /*alinea el texto ala derecha*/
+}
+ 
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute; /*la posicion absoluta esta en el hijo*/
+    left: -2rem;
+    
+     
+}
+.testimonial blockquote{
+    position: relative; /*posicion relativa esta en el padre*/
+    padding-left:5rem; 
+    font-weight: 300;
+}
+
+/*__________________________________________________________________________________________*/
+
+/*footer*/
+.site-footer{
+    background-color:  #0071bd;
+    margin: 0;
+    
+}
+.site-footer p{
+    color: #ffffff;
+    text-transform: capitalize;
+    flex: 0 0 calc(35% - 1rem);
+    
+}
+
+    
+
+    
+@media (min-width: 768px) {
+    .social{
+      
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    align-items: center;
+      
+    }
+    
+      
+    
+  }
+  .social{
+    
+    display: flex;
+    justify-content: space-evenly; /*aliniea de manera horizontal*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 5rem;
+    text-decoration: none;
+}
+
+
+    
+
+.contenedor-footer{
+    padding: 1rem 0; /*espacio hacia adentro*/
+    text-align: center;
+  
+}
+
+
+@media (min-width: 768px) {
+    .contenedor-footer{
+      
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    
+}
+.site-footer nav{
+    display: none;
+}
+@media (min-width: 768px) {
+    .site-footer nav{
+        display: block;
+    }
+    
+    
+}
+.copyright  {
+    margin: 1;
+    color: white;
+   
+    
+
+    
+}
+
+
+
+
+/*paginas internas*/
+/*nosotros*/
+@media (min-width: 768px) {
+    .contenido-nosotros{
+        display: grid;/*nuevo estandar para crear pagians web junto con flexbox */
+        grid-template-columns: repeat(2, 1fr); /*crea columnas el repeat 2 es el numero que se va arepetir 1fr es la fraccion*/
+        grid-column-gap: 2rem; /*crea la separacion entre las columnas*/
+    
+    }
+
+    
+}
+.icono img{
+    
+   
+    
+    
+    height: 37rem;  /*agranda la imagen*/
+  
+
+    
+}
+
+.texto-nosotros blockquote{ 
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+
+}
+/*anuncio*/
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*contacto*/
+.contacto-img{
+   width: 200rem; /*ancho de imagen*/
+   height: 50rem; /*alto de imagen*/
+}
+.contacto p{
+    font-size: 1.4rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+
+}
+legend{
+    font-size: 2.4rem;
+    text-transform: capitalize;
+
+}
+label{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333333;
+    display: block; /*separa los labels*/
+
+}
+
+
+/*gebera los cambios en los type*/
+input:not([type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem; 
+}
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+select{
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea{
+    height: 20rem;
+}
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
